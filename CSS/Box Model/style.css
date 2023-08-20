@@ -1,0 +1,13 @@
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color: beige;
+}
+
+.square{
+    height: 400px;
+    width: 400px;
+    background-color: violet;
+    margin-bottom: 20px;
+    padding-left: 80px;
+}

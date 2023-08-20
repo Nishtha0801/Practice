@@ -1,0 +1,19 @@
+.blue{
+    height: 200px;
+    width: 200px;
+    background-color: skyblue;
+}
+
+.violet{
+    height: 400px;
+    width: 400px;
+    background-color: violet;
+    transform: translate(100px, -100px);
+}
+
+.brown{
+    height: 200px;
+    width: 200px;
+    background-color: brown;
+    transform: translate(400px, -200px);
+}

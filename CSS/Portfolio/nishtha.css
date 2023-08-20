@@ -1,0 +1,340 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100vw;
+    padding-bottom: 400px;
+}
+.header{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../../Images/flower.jpeg");
+    background-repeat: no-repeat;
+}
+.navbar{
+    height: 10%;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navbar ul li{
+    list-style: none;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.logo{
+    height: 100%;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.options{
+    height: 100%;
+    width: 90%;
+    padding-right: 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.options ul{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.content{
+    height: 80%;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.content h1{
+    font-size: 60px;
+}
+
+.content p{
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+#aboutMe{
+    height: 60vh;
+    width: 100%;
+    padding: 2%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.heading{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.aboutContent{
+    width: 100%;
+    height: 90%;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-evenly;  
+    align-items: center; 
+}
+
+.imageDiv{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.content-aboutMe{
+    height: 100%;
+    width: 70%;
+}
+
+.imageDiv img{
+    height: 100%;
+    width: 100%;
+}
+
+.content-aboutMe p, ul{
+    margin-top: 20px;
+}
+
+.aboutContent ul{
+    padding-left: 2%;
+}
+
+.resume{
+    height: 50px;
+    width: 150px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+#services{
+    height: 100vh;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.services-heading{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.myServices{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;  
+    padding-top: 100px;
+}
+
+.service{
+    height: 60%;
+    width: 30%;
+    border: 2px solid black;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+.service i{
+    font-size: 60px;
+}
+
+.service h2{
+     margin: 20px;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     font-size: 30px;
+}
+
+.service p{
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.service:hover{
+    border: 2px solid rgb(37, 186, 37);
+}
+
+.service:hover .serviceIcon{
+    color: rgb(37, 186, 37);
+}
+
+#portfolios{
+    height: 120vh;
+    width: 100%;
+}
+
+.port-heading{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.myportfolios{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;  
+    padding-top: 150px;
+}
+
+.portfolio{
+    height: 70%;
+    width: 30%;
+    border: 2px solid black;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.portfolio img{
+    height: 60%;
+    width: 100%;
+}
+
+.portfolio h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.portfolio p{
+    font-size: 15px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+
+}
+
+.portfolio button{
+    height: 40px;
+    width: 100px;
+    background-color: rgb(37, 186, 37);
+    border: 2px solid rgb(37, 186, 37);
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+#contactMe{
+    height: 60vh;
+    width: 100%;
+    padding-top: 200px;
+}
+
+.contact-heading{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.mapAndDetails{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.map{
+    height: 90%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 400px;
+}
+
+.details{
+    height: 100%;
+    width: 50%;
+    padding-top: 65px;
+    
+}
+
+.details input{
+    height: 50px;
+    width: 60%;
+    margin: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+.details textarea{
+    width: 60%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.details .submit{
+    height: 40px;
+    width: 120px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(37, 186, 37);
+    border: 2px solid rgb(37, 186, 37);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color: beige;
+}
+.divOne{
+    height: 20%;
+    width: 100%;
+    background-color: rgba(153, 205, 50, 0.229);
+}
+.divTwo{
+    height: 80%;
+    width: 100%;
+    display: flex;
+}
+.imageDiv{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contentDiv{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    height: 400px;
+    width: 500px;
+}
+
+.heading{
+    height: 100%;
+    width: 100%;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: violet;
+}
+

@@ -1,0 +1,21 @@
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.odd{
+    background-color: rgb(201, 199, 199);
+}
+
+.header{
+    background-color: black;
+    color: white;
+}
+
+table{
+    font-size: 14px;
+    font-family: 'sans-serif';
+}

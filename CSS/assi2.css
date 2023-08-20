@@ -1,0 +1,43 @@
+.container{
+    height: 100vh;
+    width: 100vw;
+}
+
+.heading{
+    height: 20%;
+    width: 100%;
+    background-color: pink;
+    color: brown;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    height: 80%;
+    width: 100%;
+}
+.contentDiv{
+    height: 20%;
+    width: 100%;
+}
+.req{
+    font-size: 20px;
+}
+
+.divOne, .divTwo{
+    height: 25%;
+    width: 80%;
+    background-color: #d5d9ee;
+    border: 2px solid #6a65c8;
+    padding: 20px;
+    margin: 20px;
+}
+
+.week1{
+    color: #6a65c8;
+}
+
+.red{
+    color: red;
+}

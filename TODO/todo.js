@@ -1,0 +1,76 @@
+let form = document.querySelector("#todo-form");
+let todoS = document.querySelector(".todos");
+
+let input = document.querySelector("#todo-input");
+console.log(input);
+
+form.addEventListener("submit", (e) => {
+
+    e.preventDefault(); 
+
+    let task = input.value;
+
+    if(task === ''){
+        alert("Empty tasks cannot be added");
+        return;
+    }
+
+    let todoDiv = document.createElement("div");
+    todoDiv.classList.add("todo");
+
+    todoS.appendChild(todoDiv);
+
+    let todoContent = document.createElement("div");
+    todoContent.classList.add("todo-content");
+    todoDiv.appendChild(todoContent);
+
+    let todoInput = document.createElement("input");
+    todoInput.classList.add("text");
+    todoInput.type = "text";
+    todoInput.value = task; //by default value
+    todoInput.setAttribute("readonly", "readonly");
+    todoContent.appendChild(todoInput);
+
+
+    let todoActions = document.createElement("div");
+    todoActions.classList.add("todo-actions");
+    todoDiv.appendChild(todoActions);
+
+    let deleteButton = document.createElement("button");
+    deleteButton.innerHTML = "Delete";
+    deleteButton.classList.add("delete");
+
+
+    let editButton = document.createElement("button");
+    editButton.innerHTML = "Edit";
+    editButton.classList.add("edit");
+
+    todoActions.appendChild(deleteButton);
+    todoActions.appendChild(editButton);
+
+    deleteButton.addEventListener("click", () => {
+        todoS.removeChild(todoDiv);
+    });
+
+    editButton.addEventListener("click", () => {
+        if(editButton.innerText == "Save changes"){
+            todoInput.setAttribute("readonly", "readonly");
+            editButton.innerText = "Edit";
+        }
+
+        else{
+            todoInput.removeAttribute("readonly");
+            editButton.innerText = "Save changes";
+        }
+
+    })
+
+    input.value = "";
+
+
+
+    
+
+});
+
+

@@ -1,0 +1,13 @@
+.box{
+    height: 400px;
+    width: 400px;
+    background-color: violet;
+    transition: width 2s, height 2s, rotate 2s;
+}
+
+.box:hover{
+    width: 600px;
+    height: 600px;
+    rotate: 30deg;
+}
+

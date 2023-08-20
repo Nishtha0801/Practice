@@ -1,0 +1,19 @@
+div{
+    height: 200px;
+    width: 200px;
+}
+
+.violet{
+    background-color: violet;
+    position: sticky;
+    top: 0px;
+}
+
+.skyblue{
+    background-color: skyblue;
+    
+}
+
+.lightgreen{
+    background-color: lightgreen;
+}

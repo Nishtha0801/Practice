@@ -60,8 +60,8 @@ slider.onchange = function() {
 }
 
 let colorInput = document.getElementById("paintColor");
-colorInput.addEventListener("change", ()=>{
-    circle.style.backgroundColor = this.value;
+colorInput.addEventListener("input", ()=>{
+     circle.style.backgroundColor = colorInput.value;
 })
 
 

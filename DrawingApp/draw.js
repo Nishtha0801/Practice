@@ -4,11 +4,22 @@ let canvas = document.querySelector("#canvas");
 // undo, redo 
 let points = [];
 
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
+
+window.addEventListener("resize", function(){
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+})
+
+
 let ctx = canvas.getContext('2d');
 ctx.fillStyle = "black";
 ctx.lineCap = 'round';
 
 let isPenDown = false;
+
+
 
 canvas.addEventListener("mousedown", function(e){
     isPenDown = true;
@@ -106,21 +117,21 @@ canvas.addEventListener("mouseup", function(e){
 //     paint = false;
 // })
 
-let circle = document.getElementById("circle");
-let slider = document.getElementById("slider");
+// let circle = document.getElementById("circle");
+// let slider = document.getElementById("slider");
 
 
-slider.onchange = function() {
-    console.log(this.value);
-    circle.style.height = `${this.value}px`;
-    circle.style.width = `${this.value}px`;
-    ctx.lineWidth = this.value; 
-}
+// slider.onchange = function() {
+//     console.log(this.value);
+//     circle.style.height = `${this.value}px`;
+//     circle.style.width = `${this.value}px`;
+//     ctx.lineWidth = this.value; 
+// }
 
-let colorInput = document.getElementById("paintColor");
-colorInput.addEventListener("input", ()=>{
-     circle.style.backgroundColor = colorInput.value;
-})
+// let colorInput = document.getElementById("paintColor");
+// colorInput.addEventListener("input", ()=>{
+//      circle.style.backgroundColor = colorInput.value;
+// })
 
 
 

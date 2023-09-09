@@ -1,8 +1,10 @@
 let canvas = document.querySelector("#canvas");
 
 
-// undo, redo 
+
 let points = [];
+
+let redoPoints = [];
 
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
@@ -31,6 +33,7 @@ canvas.addEventListener("mousedown", function(e){
     ctx.moveTo(x,y);
 
     let point = {
+        id : "md",
         x : x,
         y : y,
         color: ctx.strokeStyle,
@@ -51,6 +54,7 @@ canvas.addEventListener("mousemove", function(e){
         ctx.stroke();
 
         let point = {
+            id: "mm",
             x : x,
             y : y,
             color: ctx.strokeStyle,

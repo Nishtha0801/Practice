@@ -9,6 +9,9 @@ let red = document.querySelector(".red");
 let yellow = document.querySelector(".yellow");
 let blue = document.querySelector(".blue");
 
+let undo = document.querySelector("#undo");
+let redo = document.querySelector("#redo");
+
 
 let pencilSlider = document.querySelector("#pencil-slider");
 let eraserSlider = document.querySelector("#eraser-slider");
@@ -60,6 +63,48 @@ eraser.addEventListener("click", function(){
         ctx.lineWidth = eraserWidth;
     }
 });
+
+
+undo.addEventListener("click", function(){
+    removeLastLine();
+    ctx.clearRect(0,0, canvas.width, canvas.height);
+    reDraw();
+})
+
+
+function removeLastLine(){
+    if(points.length == 0){
+        return;
+    }
+
+    let linePoints = [];
+    let idx = points.length - 1;
+    if(idx>=0){
+        while(points[idx].id != "md"){
+            linePoints.unshift(points.pop());
+            idx--;
+        }
+    }
+
+    linePoints.unshift(points.pop());
+    redoPoints.push(linePoints);
+}
+
+function reDraw(){
+    for(let i=0;i<points.length;i++){
+        if(points[i].id == "md"){
+            ctx.strokeStyle = points[i].color;
+            ctx.lineWidth = points[i].lineWidth;
+            ctx.beginPath();
+            ctx.moveTo(points[i].x, points[i].y);
+        } else {
+            ctx.strokeStyle = points[i].color;
+            ctx.lineWidth = points[i].lineWidth;
+            ctx.lineTo(points[i].x, points[i].y);
+            ctx.stroke();
+        }
+    }
+}
 
 black.addEventListener("click", function(){
     ctx.strokeStyle = "black";

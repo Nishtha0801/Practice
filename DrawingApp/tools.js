@@ -71,6 +71,27 @@ undo.addEventListener("click", function(){
     reDraw();
 })
 
+redo.addEventListener("click", function(){
+    if(redoPoints.length >= 1){
+        let lastLine = redoPoints.pop();
+        for(let i=0;i<lastLine.length; i++){
+            points.push(lastLine[i]);
+
+            if(lastLine[i].id == "md"){
+                ctx.strokeStyle = lastLine[i].color;
+                ctx.lineWidth = lastLine[i].width;
+                ctx.beginPath();
+                ctx.moveTo(lastLine[i].x , lastLine[i].y);
+            } else {
+                ctx.strokeStyle = lastLine[i].color;
+                ctx.lineWidth = lastLine[i].width;
+                ctx.lineTo(lastLine[i].x , lastLine[i].y);
+                ctx.stroke();
+            }
+        }
+    }
+})
+
 
 function removeLastLine(){
     if(points.length == 0){

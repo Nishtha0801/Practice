@@ -37,6 +37,50 @@ function createSticky(){
 
      document.body.appendChild(sticky);
 
+
+     close.addEventListener("click", function(){
+        sticky.remove();
+     });
+
+     minimize.addEventListener("click", function(){
+        stickyContent.style.display = stickyContent.style.display == "none"? "block" : "none";
+     });
+
+     let initialX;
+     let initialY;
+     let stickyHolded = false;
+
+     stickyHeader.addEventListener("mousedown", function(e){
+        stickyHolded = true;
+        initialX = e.clientX;
+        initialY = e.clientY;
+     });
+
+     window.addEventListener("mousemove", function(e){
+        if(stickyHolded){
+            let finalX = e.clientX;
+            let finalY = e.clientY;
+
+            let dx = finalX - initialX;
+            let dy = finalY - initialY;
+
+            let {top, left} = sticky.getBoundingClientRect();
+            sticky.style.top = top+dy+"px";
+            sticky.style.left = left+dx+"px";
+
+            initialX = finalX;
+            initialY = finalY;
+
+
+        }
+     });
+
+     stickyHeader.addEventListener("mouseup", function(e){
+        stickyHolded = false;
+     })
+
+
+
      return stickyContent;
 
 

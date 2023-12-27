@@ -14,3 +14,12 @@ imgUpload.addEventListener("change", function(){
     }
 
 });
+
+download.addEventListener("click", function(){
+    let url = canvas.toDataURL("image/png");
+    let a = document.createElement("a");
+    a.setAttribute("href", url);
+    a.setAttribute("download", "canvas.png");
+    a.click();
+    a.remove();
+})

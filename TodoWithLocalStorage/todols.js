@@ -44,7 +44,7 @@ function renderTodos(todos){
             liItem.classList.add('checked');
         }
         liItem.innerHTML = `<input type="checkbox" class="checkbox" ${isCompleted}> ${item.task}
-        <button class="delete-buton">X</button>`
+        <button class="delete-button">X</button>`
         todoItemsList.appendChild(liItem);
     });
 }
@@ -68,13 +68,20 @@ getFromLocalStorage();
 
 // homework ===================
 function toggle(id){
-    console.log(id);
-    console.log(todos);
     todos.forEach(function(item){
         if(item.id == id){
             item.completed = !item.completed;
         }
     });
+    addToLocalStorage(todos);
+}
+
+function deleteTodo(id){
+    console.log(id);
+    todos = todos.filter(function(item){
+        return item.id != id;
+    });
+    console.log(todos);
     addToLocalStorage(todos);
 }
 
@@ -84,7 +91,11 @@ todoItemsList.addEventListener('click', function(e){
     if(e.target.type === 'checkbox'){
         toggle(e.target.parentElement.getAttribute('data-key'));
     }
+    console.log(e.target.classList);
+    if(e.target.classList.contains('delete-button')){
+        console.log("inside the if condition");
+        deleteTodo(e.target.parentElement.getAttribute('data-key'));
+    }
 })
 
-// delete =========================
 
